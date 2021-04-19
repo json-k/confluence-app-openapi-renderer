@@ -1,0 +1,22 @@
+modules:
+  macro:
+    - key: openapi-renderer
+      resource: main
+      resolver:
+        function: resolver
+      title: OpenAPI Renderer
+      description: Renders an OpenAPI document
+      config:
+        function: config
+      viewportSize: xlarge
+  function:
+    - key: resolver
+      handler: index.handler
+    - key: config
+      handler: index.config
+resources:
+  - key: main
+    path: static/main/build
+app:
+  id: ari:cloud:ecosystem::app/04ebd038-7925-4621-9e39-11832c6a8992
+  name: openapi-renderer-app
